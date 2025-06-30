@@ -53,7 +53,15 @@
       "Bash(git init:*)",
       "Bash(git submodule add:*)",
       "Bash(git branch:*)",
-      "Bash(git remote add:*)"
+      "Bash(git remote add:*)",
+      "Bash(./scripts/project-status.sh:*)",
+      "Bash(./scripts/soul-status.sh:*)",
+      "Bash(./scripts/show-v02-work.sh:*)",
+      "Bash(./scripts/start-work.sh:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(gh issue view:*)",
+      "Bash(gh issue list:*)",
+      "Bash(gh api:*)"
     ],
     "deny": []
   }

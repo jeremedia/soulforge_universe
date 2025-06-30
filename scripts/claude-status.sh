@@ -14,25 +14,38 @@ if ! gh auth status &>/dev/null; then
 fi
 
 echo "🚀 IN PROGRESS ITEMS:"
-gh project item-list 1 --owner jeremedia --limit 20 --format json 2>/dev/null | \
-  jq -r '.items[] | 
-  select(.status == "In Progress") | 
-  "• \(.content.repository // "unknown")#\(.content.number // "?"): \(.content.title // .title // "Unknown title")"' || \
-  echo "   Unable to fetch from project board"
+ITEMS=$(gh project item-list 1 --owner jeremedia --limit 100 2>/dev/null)
+if [ -n "$ITEMS" ]; then
+    # Parse the text output format from gh
+    echo "$ITEMS" | grep -E "^Issue|^DraftIssue|^Note" | head -5 | while IFS=$'\t' read -r type title number repo id; do
+        if [ -n "$title" ]; then
+            echo "• ${repo}#${number}: ${title}"
+        fi
+    done
+    
+    # Check if any items were found
+    if [ $(echo "$ITEMS" | grep -c "^Issue\|^DraftIssue\|^Note") -eq 0 ]; then
+        echo "   No items currently in progress"
+    fi
+else
+    echo "   Unable to fetch from project board"
+fi
 
 echo ""
 echo "📍 YOUR LOCATION:"
 pwd
 echo ""
 
-echo "🎯 HIGH PRIORITY BACKLOG:"
-gh project item-list 1 --owner jeremedia --limit 50 --format json 2>/dev/null | \
-  jq -r '.items[] | 
-  select(.status == "Backlog" or .status == "Todo") | 
-  select(.priority == "🔥 Critical" or .priority == "🎯 High" or .priority == null) |
-  "• \(.content.repository // "unknown")#\(.content.number // "?"): \(.content.title // .title // "Unknown title")"' | \
-  head -5 || \
-  echo "   Unable to fetch from project board"
+echo "🎯 ALL PROJECT ITEMS:"
+if [ -n "$ITEMS" ]; then
+    echo "$ITEMS" | grep -E "^Issue|^DraftIssue|^Note" | head -10 | while IFS=$'\t' read -r type title number repo id; do
+        if [ -n "$title" ]; then
+            echo "• ${repo}#${number}: ${title}"
+        fi
+    done
+else
+    echo "   Unable to fetch from project board"
+fi
 
 echo ""
 echo "📊 REPOSITORY STATUS:"
