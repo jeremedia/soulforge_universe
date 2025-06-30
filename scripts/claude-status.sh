@@ -1,6 +1,11 @@
 #!/bin/bash
 # Quick status check for Claude Code sessions
 
+# Get the script's directory and cd to parent (project root)
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
+cd "$PROJECT_ROOT"
+
 echo "🌌 SOULFORGE UNIVERSE STATUS"
 echo "=========================="
 echo ""
@@ -32,8 +37,11 @@ else
 fi
 
 echo ""
-echo "📍 YOUR LOCATION:"
-pwd
+echo "📍 PROJECT ROOT:"
+echo "$PROJECT_ROOT"
+echo ""
+echo "📍 YOUR CURRENT LOCATION:"
+echo "$OLDPWD"
 echo ""
 
 echo "🎯 ALL PROJECT ITEMS:"

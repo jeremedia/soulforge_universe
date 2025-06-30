@@ -1,6 +1,11 @@
 #!/bin/bash
 # Show detailed project board status
 
+# Get the script's directory and cd to parent (project root)
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
+cd "$PROJECT_ROOT"
+
 PROJECT_ID=1
 OWNER=jeremedia
 

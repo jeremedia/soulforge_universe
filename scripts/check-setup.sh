@@ -1,7 +1,13 @@
 #!/bin/bash
 # Check if the Soulforge Universe is properly set up
 
+# Get the script's directory and cd to parent (project root)
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
+cd "$PROJECT_ROOT"
+
 echo "🔍 Checking Soulforge Universe setup..."
+echo "📍 Project root: $PROJECT_ROOT"
 echo ""
 
 # Check if submodules are initialized

@@ -61,7 +61,8 @@
       "WebFetch(domain:github.com)",
       "Bash(gh issue view:*)",
       "Bash(gh issue list:*)",
-      "Bash(gh api:*)"
+      "Bash(gh api:*)",
+      "Bash(./claude-status.sh)"
     ],
     "deny": []
   }
