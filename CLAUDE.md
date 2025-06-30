@@ -345,6 +345,7 @@ When working with Jer (Jeremy Roush) on this project, see [jeremy_roush_info.yml
 2. **Check Status**: Run `./scripts/claude-status.sh` to see board status
 3. **View Board**: https://github.com/users/jeremedia/projects/1
 4. **Pick Work**: Take from "In Progress" or high-priority "Backlog" items
+5. **Learn Your Role**: Read `.claude/DIRECTOR_GUIDE.md` - you're directing souls, not code!
 
 ### Quick Commands
 ```bash

@@ -38,3 +38,4 @@
 - **PROJECT_STATUS.md**: Current sprint and priorities
 - **soulforge/CLAUDE.md**: Frontend game documentation
 - **soulsoup/CLAUDE.md**: Backend API documentation
+- **.claude/DIRECTOR_GUIDE.md**: Guide for directing souls (not code!)
