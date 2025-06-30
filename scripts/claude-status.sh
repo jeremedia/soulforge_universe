@@ -49,8 +49,17 @@ fi
 
 echo ""
 echo "📊 REPOSITORY STATUS:"
-echo "- soulforge_battle: $(cd /Volumes/jer4TBv3/Soulforge_Universe/soulforge 2>/dev/null && git branch --show-current 2>/dev/null || echo "not found")"
-echo "- soulsoup: $(cd /Volumes/jer4TBv3/Soulforge_Universe/soulsoup 2>/dev/null && git branch --show-current 2>/dev/null || echo "not found")"
+
+# Check if submodules are initialized
+if [ ! -f "soulforge/.git" ] || [ ! -f "soulsoup/.git" ]; then
+    echo "⚠️  SUBMODULES NOT INITIALIZED!"
+    echo ""
+    echo "Run: git submodule update --init --recursive"
+    echo "Or use: ./scripts/check-setup.sh"
+else
+    echo "- soulforge_battle: $(cd soulforge 2>/dev/null && git branch --show-current 2>/dev/null || echo "not found")"
+    echo "- soulsoup: $(cd soulsoup 2>/dev/null && git branch --show-current 2>/dev/null || echo "not found")"
+fi
 
 echo ""
 echo "💡 TIPS:"

@@ -32,10 +32,19 @@ Machine learning pipeline for soul adaptation and consciousness evolution.
 ```bash
 # Clone the entire Soulforge Universe with submodules
 git clone --recurse-submodules https://github.com/jeremedia/soulforge_universe.git
+cd soulforge_universe
 
-# Or if you already cloned without submodules
+# Verify setup is correct
+./scripts/check-setup.sh
+```
+
+### If You Cloned Without Submodules
+```bash
 cd soulforge_universe
 git submodule update --init --recursive
+
+# Or just run:
+./scripts/check-setup.sh
 ```
 
 ### Starting the Applications

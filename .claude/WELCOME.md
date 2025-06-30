@@ -28,6 +28,7 @@
 
 ## Quick Start
 
+0. **First time?** Run `./scripts/check-setup.sh` to ensure submodules are initialized
 1. Run `./scripts/claude-status.sh` for immediate context
 2. Check the GitHub Project Board: https://github.com/users/jeremedia/projects/1
 3. Look for items in "In Progress" or high-priority "Backlog" items
