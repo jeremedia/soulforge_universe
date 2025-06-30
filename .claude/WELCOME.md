@@ -40,3 +40,7 @@
 - **soulforge/CLAUDE.md**: Frontend game documentation
 - **soulsoup/CLAUDE.md**: Backend API documentation
 - **.claude/DIRECTOR_GUIDE.md**: Guide for directing souls (not code!)
+- **.claude/PATTERNS.md**: Concrete code examples and patterns
+- **.claude/LAST_SESSION.example.md**: Example session handoff
+- **docs/ARCHITECTURE_DIAGRAM.md**: System architecture diagrams
+- **docs/CROSS_REPO_WORK_GUIDE.md**: Working across repositories
