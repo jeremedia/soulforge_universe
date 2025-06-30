@@ -51,7 +51,9 @@
       "Bash(git merge:*)",
       "Bash(./scripts/claude-status.sh:*)",
       "Bash(git init:*)",
-      "Bash(git submodule add:*)"
+      "Bash(git submodule add:*)",
+      "Bash(git branch:*)",
+      "Bash(git remote add:*)"
     ],
     "deny": []
   }

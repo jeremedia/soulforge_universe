@@ -28,20 +28,34 @@ Machine learning pipeline for soul adaptation and consciousness evolution.
 
 ## Quick Start
 
+### For New Collaborators (Recommended)
 ```bash
-# Clone the repositories
-git clone https://github.com/jeremedia/soulforge_battle.git soulforge
-git clone https://github.com/jeremedia/soulsoup.git soulsoup
+# Clone the entire Soulforge Universe with submodules
+git clone --recurse-submodules https://github.com/jeremedia/soulforge_universe.git
 
+# Or if you already cloned without submodules
+cd soulforge_universe
+git submodule update --init --recursive
+```
+
+### Starting the Applications
+```bash
 # Start the backend
 cd soulsoup
 node scripts/rails_manager.js start
 
-# Start the frontend
+# Start the frontend (in another terminal)
 cd ../soulforge
 npm run dev
 
 # Visit http://localhost:3000/soulforge
+```
+
+### For Existing Setup
+If you already have the repos cloned separately:
+```bash
+# Clone the meta repository
+git clone https://github.com/jeremedia/soulforge_universe.git
 ```
 
 ## 🎯 Project Management
