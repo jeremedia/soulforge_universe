@@ -1,0 +1,6 @@
+[submodule "soulforge"]
+	path = soulforge
+	url = https://github.com/jeremedia/soulforge_battle.git
+[submodule "soulsoup"]
+	path = soulsoup
+	url = https://github.com/jeremedia/soulsoup.git

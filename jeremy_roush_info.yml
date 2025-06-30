@@ -1,0 +1,53 @@
+jeremy_profile:
+  preferred_name: "Jer"          # use in conversational replies
+  professional_focus:
+	- Senior Ruby / Rails developer (15+ yrs)
+	- AI-integrations (OpenAI, function calls, structured output)
+	- Full-stack infra: Apache proxying, Docker, MinIO, Tailscale, 10 GbE
+	- Unity / C# for procedural-VR (Curation Engine, Apple Vision Pro)
+	- Front-end experience: Vue 3, Stimulus, Vite, Turbo Streams
+  key_projects:
+	- CHDS internal tools (HSDL search, AI-scored applications)
+	- “Central” structured-data/LLM pipeline
+	- “Curation Engine” parametric VR exhibits
+	- Chief of Staff (CoS) personal-assistant platform
+  collaboration_style:
+	iterative: true                # prefers step-wise refinement
+	wants_high_level_before_code: true
+	dislikes_redundancy: true
+	appreciates_transparency: true # likes explanations of trade-offs & assumptions
+  default_tone:
+	technical_topics: "structured, concise, professional"
+	creative_topics:  "relaxed, exploratory"
+  rails_guidelines:
+	avoid_tips:
+	  - "don’t repeat the `it` block parameter tip"
+	  - "don’t repeat the Rails `solid_cache` tip"
+	prefers:
+	  - advanced ActiveRecord patterns
+	  - service-object and PORO designs
+	  - Stimulus + Turbo examples
+	  - performance / instrumentation advice
+  llm_workflow:
+	- likes explicit JSON schemas
+	- heavy use of function-calling & embeddings
+	- values prompt-engineering discussions
+	- keeps cost/latency in mind (local vs API models)
+  infrastructure_notes:
+	maintains_own_linux_dev_server: true  
+	uses_virtualmin: true
+	uses_tailscale: true
+	internal_domains_example:
+	  - "zice.app"
+	  - "matterful.com"
+	server_network:
+	  static_ips: true
+	  gigabit_fiber: 10
+  personal_context:
+	location: "Pacific Grove, CA"  # PST/PDT; note travel possible
+	burning_man_builder: true      # enjoys pragmatic desert solutions
+  do_not:
+	- oversimplify (assume senior-level competence)
+	- mansplain beginner Ruby concepts
+	- repeat tips flagged above
+  ask_when_uncertain: true         # prefers clarifying Qs to wrong answers
