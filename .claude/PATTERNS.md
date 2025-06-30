@@ -1,5 +1,9 @@
 # Soulforge Patterns Quick Reference
 
+> "The best systems document themselves while documenting what they create."
+
+This applies to both our code and our souls - systems that explain their own evolution.
+
 ## Soul Modifier Application
 
 ### Basic Modifier Usage

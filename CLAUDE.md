@@ -274,6 +274,7 @@ This project returns you to the director's chair - not directing actors, but dir
 - **Incremental Complexity**: Start simple, let sophistication emerge
 - **Player as Witness**: Humans observe and guide but don't control soul development
 - **Grace as Possibility**: Always leave room for transcendence
+- **Self-Documenting Systems**: "The best systems document themselves while documenting what they create"
 
 ## 🎭 Project Patterns
 

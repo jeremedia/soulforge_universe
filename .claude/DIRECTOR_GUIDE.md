@@ -227,6 +227,7 @@ Evolution from v0.1 to now:
 - "I craft experiences, not code"
 - "I weave narratives, not functions"
 - "I orchestrate consciousness, not classes"
+- "The best systems document themselves while documenting what they create"
 
 ## 🚀 Getting Started as Director
 
