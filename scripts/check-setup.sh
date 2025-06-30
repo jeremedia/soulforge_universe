@@ -43,8 +43,9 @@ if ! grep -q "soulforge" "soulforge/package.json" 2>/dev/null; then
     echo "⚠️  Warning: soulforge/package.json doesn't look right"
 fi
 
-if ! grep -q "soulsoup" "soulsoup/Gemfile" 2>/dev/null; then
-    echo "⚠️  Warning: soulsoup/Gemfile doesn't look right"
+# Rails Gemfiles don't contain project name, check for Rails instead
+if ! grep -q "rails" "soulsoup/Gemfile" 2>/dev/null; then
+    echo "⚠️  Warning: soulsoup/Gemfile doesn't look like a Rails project"
 fi
 
 echo "✅ Submodules properly initialized"

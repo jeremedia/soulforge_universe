@@ -63,6 +63,7 @@
       "Bash(gh issue list:*)",
       "Bash(gh api:*)",
       "Bash(./claude-status.sh)",
+      "Bash(./scripts/check-setup.sh:*)",
       "Bash(./scripts/check-setup.sh:*)"
     ],
     "deny": []
