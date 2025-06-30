@@ -62,7 +62,8 @@
       "Bash(gh issue view:*)",
       "Bash(gh issue list:*)",
       "Bash(gh api:*)",
-      "Bash(./claude-status.sh)"
+      "Bash(./claude-status.sh)",
+      "Bash(./scripts/check-setup.sh:*)"
     ],
     "deny": []
   }

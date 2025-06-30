@@ -58,12 +58,15 @@ fi
 echo ""
 echo "📊 REPOSITORY STATUS:"
 
-# Check if submodules are initialized
-if [ ! -f "soulforge/.git" ] || [ ! -f "soulsoup/.git" ]; then
-    echo "⚠️  SUBMODULES NOT INITIALIZED!"
+# Check if project directories exist
+if [ ! -d "soulforge" ] || [ ! -d "soulsoup" ]; then
+    echo "⚠️  PROJECT DIRECTORIES NOT FOUND!"
     echo ""
-    echo "Run: git submodule update --init --recursive"
-    echo "Or use: ./scripts/check-setup.sh"
+    echo "Run: ./scripts/check-setup.sh for diagnosis"
+elif [ ! -f "soulforge/package.json" ] || [ ! -f "soulsoup/Gemfile" ]; then
+    echo "⚠️  PROJECT DIRECTORIES EXIST BUT MAY BE EMPTY!"
+    echo ""
+    echo "Run: ./scripts/check-setup.sh for diagnosis"
 else
     echo "- soulforge_battle: $(cd soulforge 2>/dev/null && git branch --show-current 2>/dev/null || echo "not found")"
     echo "- soulsoup: $(cd soulsoup 2>/dev/null && git branch --show-current 2>/dev/null || echo "not found")"

@@ -47,6 +47,11 @@ git submodule update --init --recursive
 ./scripts/check-setup.sh
 ```
 
+### ⚠️ Important Note for Local Development
+If you already have `soulforge` and `soulsoup` directories with their own git repos (not submodules), the scripts will work correctly. They check for the presence of key files (`package.json` and `Gemfile`) rather than submodule-specific structures. 
+
+**DO NOT** let any automated process delete or reinitialize these directories if they already contain your work!
+
 ### Starting the Applications
 ```bash
 # Start the backend
